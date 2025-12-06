@@ -1,4 +1,4 @@
-from ex01.format_ft_time import formatTime
+from format_ft_time import formatTime
 
 if __name__ == "__main__":
     formatString = "%Y-%m-%d %H:%M:%S"
@@ -13,6 +13,6 @@ if __name__ == "__main__":
     print(
         f"Seconds since {pastDateInfo.formattedDate}: "
         f"{timeSincePastSeconds} or "
-        f"{"{:e}".format(timeSincePastSeconds)} in scientific notation"
+        f"{timeSincePastSeconds:e} in scientific notation"
     )
     print(currentTimeInfo.formattedDate)
