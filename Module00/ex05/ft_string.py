@@ -14,9 +14,5 @@ class string_info:
     whitespace = 0
     lowercase = 0
     uppercase = 0
-    letters = 0
     digits = 0
-    hexdigits = 0
-    octdigits = 0
     punctuation = 0
-    printable = 0

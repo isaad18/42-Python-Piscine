@@ -1,15 +1,17 @@
 def all_thing_is_obj(object: any) -> int:
-    switcher = {
-        int: "int",
-        float: "float",
-        complex: "complex",
-        bool: "bool",
-        str: "str",
-        list: "list",
-        tuple: "tuple",
-        set: "set",
-        dict: "dict",
-        type(None): "NoneType",
-        map: "map",
+    type_map = {
+        list: "List",
+        tuple: "Tuple",
+        set: "Set",
+        dict: "Dict",
     }
-    return switcher.get(type(object), "function")
+
+    obj_type = type(object)
+
+    if obj_type in type_map:
+        print(f"{type_map[obj_type]} : {obj_type}")
+    elif isinstance(object, str):
+        print(f"{object} is in the kitchen : {obj_type}")
+    else:
+        print("Type not found")
+        return 42
